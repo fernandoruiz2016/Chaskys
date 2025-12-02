@@ -1,8 +1,12 @@
 body {
     background-color: #4C8479;
     margin: 0px;
+    font-family: "Itim", cursive;
 }
 
+body.background2 {
+  background-color: #F2FDFF;
+}
 
 .logo {
     display: flex;
