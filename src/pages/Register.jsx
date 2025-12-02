@@ -75,13 +75,12 @@ export const Register = () => {
               required
               onChange={(e) => setForm({ ...form, pass: e.target.value })}
             />
-          </div>
-
-          <select id="vehicle" name="vehicle" required onChange={(e) => setForm({...form, vehicle:e.target.value})}>
+            <select id="vehicle" name="vehicle" required onChange={(e) => setForm({...form, vehicle:e.target.value})}>
             <option value="">Seleccionar tu vehículo</option>
             <option value="Moto Lineal">Moto Lineal</option>
             <option value="Auto">Auto</option>
           </select>
+          </div>
 
           <div className="accion-register">
             <button type="submit" className="btn btn-login">
