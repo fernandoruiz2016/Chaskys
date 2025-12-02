@@ -10,11 +10,19 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validUser = "admin";
-    const validPassword = "123456";
+    const stored = localStorage.getItem("registeredUser");
 
-    if (user === validUser && password === validPassword) {
+    if (!stored) {
+      alert("No hay ningún usuario registrado.");
+      return;
+    }
+
+    const registeredUser = JSON.parse(stored);
+
+    if (user === registeredUser.user && password === registeredUser.pass) {
       navigate("/home");
+    } else {
+      alert("Usuario o contraseña incorrectos");
     }
   };
 

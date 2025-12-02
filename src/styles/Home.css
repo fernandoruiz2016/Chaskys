@@ -5,6 +5,7 @@
   border-radius: 30px;
   border: 2px #000 solid;
   padding: 19px 24px 10px 24px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hader-user {
