@@ -202,8 +202,8 @@ export const EditProfile = () => {
                                 )}
                             </label>
                         </form>
-                        <Link className='forgot-pass' to="/">¿Olvidaste tu contraseña?</Link>
-                        <p className='btn-edit' to="/Profile" onClick={handleEdit}>Guardar cambios</p>
+                        <Link className='forgot-pass' to="/restore-password">¿Olvidaste tu contraseña?</Link>
+                        <p className='btn-edit' onClick={handleEdit}>Guardar cambios</p>
                     </>
                 )}
 
