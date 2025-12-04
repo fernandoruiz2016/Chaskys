@@ -7,11 +7,6 @@ import "../styles/NewPassword.css";
 export const NewPassword = () => {
     const [user, setUser] = useState(null);
 
-    // const [formUser, setFormUser] = useState(user);
-    // useEffect(() => {
-    //     setFormUser(user);
-    // }, [user]);
-
     const [newPass, setNewPass] = useState("");
     const [repeatPass, setRepeatPass] = useState("");
     const [passError, setPassError] = useState(false);
@@ -48,7 +43,6 @@ export const NewPassword = () => {
                 ...user,
                 pass: newPass
             };
-            // setFormUser(updatedUser);
             setUser(updatedUser);
             localStorage.setItem("registeredUser", JSON.stringify(updatedUser));
             alert('Cambios guardados exitosamente');

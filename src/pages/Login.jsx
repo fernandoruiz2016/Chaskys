@@ -53,7 +53,7 @@ export const Login = () => {
         </section>
 
         <section className="accion-login">
-          <span>¿Olvidaste tu contraseña?</span>
+          <Link className='forgot-pass' to="/ingresar-email">¿Olvidaste tu contraseña?</Link>
           <button type="submit" className="btn btn-login">
             Iniciar Sesión
           </button>
