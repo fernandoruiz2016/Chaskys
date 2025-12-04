@@ -39,10 +39,10 @@ export const IngresarEmail = () => {
 
     return (
         <>
-            <HeaderProfile page="Recuperar Contraseña" backPage="/edit-profile" ></HeaderProfile>
+            <HeaderProfile page="Recuperar Contraseña" backPage="/login" ></HeaderProfile>
             <div className='section-resend'>
                 <h3 className='subtitle-pass'>Ingresa tu correo</h3>
-                <p className='text-pass'>Te enviaremos un código de verificación a tu correo</p>
+                <p className='text-pass' id="verify-mail">Te enviaremos un código de verificación a tu correo</p>
                 <label className='subtitle-info' htmlFor="edit-email">
                     <input className='input-edit' type='text' id="edit-email" value={email} placeholder='Correo electrónico' required onChange={(e) => setEmail(e.target.value)} />
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='small-icon'>

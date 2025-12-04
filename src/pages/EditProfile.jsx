@@ -49,7 +49,7 @@ export const EditProfile = () => {
         if (formUser.pass == actualPass) {
             if (passError && newPass.trim() == "") {
                 const updatedUser = {
-                    ...user,
+                    ...formUser,
                 };
                 setFormUser(updatedUser);
                 setUser(updatedUser);
@@ -69,6 +69,15 @@ export const EditProfile = () => {
             } else {
                 alert('No se pudo guardar los cambios')
             }
+        } else if (!actualPass && newPass == "" && repeatPass == "") {
+            const updatedUser = {
+                    ...formUser,
+                };
+                setFormUser(updatedUser);
+                setUser(updatedUser);
+                localStorage.setItem("registeredUser", JSON.stringify(updatedUser));
+                alert('Cambios guardados exitosamente');
+                navigate("/profile");
         } else {
             alert('No es la contraseña correcta')
         }
@@ -156,12 +165,12 @@ export const EditProfile = () => {
                                     </defs>
                                 </svg>
                                 {(actualPass !== formUser.pass && actualPass.trim() !== "") && (
-                                <p className='error'>
-                                    Contraseña incorrecta
-                                </p>
-                            )}
+                                    <p className='error'>
+                                        Contraseña incorrecta
+                                    </p>
+                                )}
                             </label>
-                            
+
 
                             <label className='subtitle-info' htmlFor="edit-pass-new">Nueva Contraseña
                                 <input className='input-edit' type='password' id="edit-pass-new" value={newPass || ""} placeholder='********' onChange={(e) => setNewPass(e.target.value)} />
