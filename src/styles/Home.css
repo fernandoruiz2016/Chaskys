@@ -117,9 +117,19 @@
   color: #5B5B5B
 }
 
-.record-view-orders{
+.record-view-orders {
   display: flex;
   justify-content: center;
   gap: 0.3em;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .header-logo-name {
+    font-size: 40px;
+  }
+
+  .header-logo-subname {
+    font-size: 16px;
+  }
 }
