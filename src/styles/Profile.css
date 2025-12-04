@@ -8,16 +8,18 @@
 .header-profile {
   font-family: "Itim", cursive;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #564787;
   min-height: 110px;
+  padding-left: 30px;
 }
 
 .header-logo {
   display: flex;
   flex-direction: column;
   align-items: end;
+  margin-right: 20px;
 }
 
 .header-logo-subname {
@@ -153,9 +155,17 @@
   width: 100%;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .header-page {
     font-size: 24px;
     margin-right: 15px;
+  }
+
+  .header-logo {
+    margin-right: 5px;
+  }
+
+  .header-profile {
+    padding-left: 0px;
   }
 }

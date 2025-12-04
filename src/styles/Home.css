@@ -19,29 +19,12 @@
   align-items: end;
 }
 
-.header-user-category {
-  font-size: 24px;
-}
-
-.header-user-name {
-  font-size: 32px;
-}
-
 .header-logo-name {
   font-size: 48px;
 }
 
 .header-logo-subname {
   font-size: 24px;
-}
-
-.header-home {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 17px 16px;
-  color: #fff;
-  font-family: "Itim", cursive;
 }
 
 .color-orange {
@@ -124,6 +107,64 @@
   margin-bottom: 10px;
 }
 
+.header-home {
+  font-family: "Itim", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #564787;
+  min-height: 110px;
+}
+
+.header-picture {
+  max-width: 40px;
+  max-height: 40px;
+  clip-path: circle(50%);
+}
+
+.header-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.header-user-text-name {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.header-user-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+}
+
+.header-user-text p {
+  margin: 0 auto 0;
+}
+
+.chasky-black-header {
+  background-color: #000;
+  color: #FFD27D;
+  width: 110px;
+  height: 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 350px) {
+  .header-user {
+    gap: 5px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .header-logo-name {
     font-size: 40px;
@@ -132,4 +173,25 @@
   .header-logo-subname {
     font-size: 16px;
   }
+
+
+}
+
+@media screen and (min-width: 700px) {
+  .header-picture {
+  max-width: 60px;
+  max-height: 60px;
+}
+  .header-user {
+    margin-left: 30px;
+    gap: 60px;
+  }
+
+  .header-user-text-name {
+  font-size: 28px;
+}
+
+.header-user-text {
+  gap: 10px;
+}
 }
