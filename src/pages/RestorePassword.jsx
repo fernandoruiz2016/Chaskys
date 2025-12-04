@@ -21,13 +21,12 @@ export const RestorePassword = () => {
 
     const handleVerify = () => {
         if (otp === '123456') {
-            alert('Codigo verificado')
-            navigate('/')
+            alert('Código verificado')
+            navigate('/new-password')
             return
         }
         setError(true);
     }
-
 
     return (
         <>
@@ -57,13 +56,13 @@ export const RestorePassword = () => {
                     renderSeparator={<span> </span>}
                     renderInput={(props) => <input {...props} />}
                 />
-                <p className='btn-edit' to="/restore-password" onClick={handleVerify}>Verificar código</p>
+                <p className='btn-edit' onClick={handleVerify}>Verificar código</p>
                 {error && (
                     <p className='error'>
                         Código incorrecto
                     </p>
                 )}
-                <p className='text-pass'>¿No recibiste el código? <span className='resend'>Reenviar</span></p>
+                <p className='text-pass'>¿No recibiste el código? <span className='resend' onClick={(e) => alert('Código reenviado')}>Reenviar</span></p>
             </div>
         </>
     )
