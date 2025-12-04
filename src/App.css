@@ -1,5 +1,5 @@
 body {
-    background-color: #4C8479;
+    background-color: #564787;
     margin: 0px;
     font-family: "Itim", cursive;
 }
@@ -78,15 +78,19 @@ input{
 }
 
 .btn-login {
-    background-color: #4C8479;
+    background-color: #564787;
     color: #FFFFFF;
 }
 
 .btn-create-account {
     display: flex;
     align-items: center;
-    background-color: #9CB9B3;
+    background-color: #DBCBD8;
     color: #000;
     text-decoration: none;
     justify-content: center;
+}
+
+#forgot-pass-login {
+    margin: 15px auto 20px;
 }
