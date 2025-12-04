@@ -33,13 +33,23 @@ body.background2 {
     font-size: 36px;
     font-family: "Itim", cursive;
     color: #FFFFFF;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
 .inputs-form {
     display: grid;
     align-items: center;
     gap: 14px;
-    margin: 40px;
+    margin: 40px auto 40px;
+    width: 80%;
 }
 
 input{
@@ -58,6 +68,7 @@ input{
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    width: 100vw;
 }
 
 .accion-login> span {
@@ -93,4 +104,10 @@ input{
 
 #forgot-pass-login {
     margin: 15px auto 20px;
+}
+
+@media screen and (max-width: 350px) {
+    .inputs-form {
+        width: 90%;
+    }
 }

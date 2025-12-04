@@ -2,22 +2,22 @@
     display: grid;
     align-items: center;
     gap: 14px;
-    margin: 23px 40px 40px 40px;
+    margin: 23px 5% 40px;
 }
 
-.accion-register{
+.accion-register {
     background-color: #FFFFFF;
-    height: 180px;
+    height: 150px;
     border-radius: 60px 60px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 34px;
+    gap: 5px;
     padding-top: 32px;
 }
 
-#vehicle{
+#vehicle {
     height: 55px;
     border-radius: 16px;
     padding-left: 15px;
@@ -28,4 +28,62 @@
 
 #btn-edit {
     margin: 50px auto 0;
+}
+
+.no-code {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.text-login {
+    text-decoration: none;
+    color: #122F89;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    color: #FFFFFF;
+
+}
+
+.modal-content {
+    background: #101935;
+    border-radius: 14px;
+    padding: 10px 0 10px;
+    width: 95%;
+    max-width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.continue {
+    text-decoration: none;
+    color: #F2FDFF;
+    background-color: #152C73;
+    width: 80%;
+    border-radius: 14px;
+    height: 57px;
+    display: block;
+    line-height: 57px;
+}
+
+@media screen and (max-width: 780px) {
+    .modal-content {
+        gap: 10px;
+    }
 }
