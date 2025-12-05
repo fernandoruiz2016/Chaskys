@@ -13,11 +13,31 @@ import "../styles/Home.css";
 export const Home = () => {
   const [user, setUser] = useState(null);
 
-  const [totalRecords, setTotalRecords] = useState(253);
-  const [totalRecordsToday, setTotalRecordsToday] = useState(32);
-  const [totalOderAvailable, setTotalOderAvailable] = useState(5);
+  const [totalRecords, setTotalRecords] = useState(0);
+  const [totalRecordsToday, setTotalRecordsToday] = useState(0);
+  const [totalOderAvailable, setTotalOderAvailable] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
   const [isVisibleHistorial, setIsVisibleHistorial] = useState(false);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/home.json");
+        if (!response.ok) {
+          alert("no se encontr el archivo");
+        }
+        const { record, total, totalHistorial, totalAmount } =
+          await response.json();
+        setTotalRecords(totalHistorial);
+        setTotalRecordsToday(total);
+        setTotalOderAvailable(record);
+        setTotalAmount(totalAmount);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const navigate = useNavigate();
 
@@ -48,8 +68,8 @@ export const Home = () => {
 
   return (
     <div>
-      <HeaderHome user={user} setUser={setUser}></HeaderHome>
-      <ProfitHome />
+      {user && (<HeaderHome user={user} setUser={setUser}></HeaderHome>)}
+      <ProfitHome totalAmount={totalAmount} />
 
       {isVisibleHistorial ? (
         <OrdersAvailableHome
