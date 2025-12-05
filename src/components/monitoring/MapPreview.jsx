@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Order } from "../home/oders/Order";
@@ -25,6 +25,19 @@ export const MapMonitoring = ({ id }) => {
   });
 
   useEffect(() => {
+    const fetchHistorial = async () => {
+      try {
+        const response = await fetch("/historial.json");
+        if (!response.ok) {
+          alert("no se encontró el archivo");
+        }
+        const { data } = await response.json();
+        const findOrder = data.find((e) => e.id == id);
+        setOrder(findOrder);
+      } catch (error) {
+        console.error(error);
+      }
+    }
     const fetchData = async () => {
       try {
         const response = await fetch("/data.json");
@@ -33,6 +46,10 @@ export const MapMonitoring = ({ id }) => {
         }
         const { data } = await response.json();
         const findOrder = data.find((e) => e.id == id);
+        if (!findOrder) {
+          fetchHistorial();
+          return
+        }
         setOrder(findOrder);
       } catch (error) {
         console.error(error);
