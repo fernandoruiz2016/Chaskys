@@ -7,6 +7,7 @@ import { RecordHome } from "../components/home/Record";
 import { OdersHome } from "../components/home/Oders";
 import { HistorialHome } from "../components/home/Historial";
 import { OrdersAvailableHome } from "../components/home/OrdersAvailable";
+import { Resumen } from "../components/home/Resumen";
 
 import "../styles/Home.css";
 
@@ -18,6 +19,8 @@ export const Home = () => {
   const [totalOderAvailable, setTotalOderAvailable] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [isVisibleHistorial, setIsVisibleHistorial] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [km, setKm] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,12 +29,14 @@ export const Home = () => {
         if (!response.ok) {
           alert("no se encontr el archivo");
         }
-        const { record, total, totalHistorial, totalAmount } =
+        const { record, total, totalHistorial, totalAmount, rating, km } =
           await response.json();
         setTotalRecords(totalHistorial);
         setTotalRecordsToday(total);
         setTotalOderAvailable(record);
         setTotalAmount(totalAmount);
+        setRating(rating);
+        setKm(km);
       } catch (error) {
         console.error(error);
       }
@@ -69,19 +74,26 @@ export const Home = () => {
   return (
     <div>
       {user && (<HeaderHome user={user} setUser={setUser}></HeaderHome>)}
-      <ProfitHome totalAmount={totalAmount} />
+
 
       {isVisibleHistorial ? (
+        <>
+        <Resumen totalAmount={totalAmount} rating={rating} km={km} ></Resumen>
         <OrdersAvailableHome
           total={totalOderAvailable}
           onViewOrdersAvailable={handlerViewOrdersAvailable}
         />
+        </>
+        
       ) : (
-        <RecordHome
-          record={totalRecords}
-          total={totalRecordsToday}
-          onViewHistorial={handlerViewHistorial}
-        />
+        <>
+          <ProfitHome totalAmount={totalAmount} />
+          <RecordHome
+            record={totalRecords}
+            total={totalRecordsToday}
+            onViewHistorial={handlerViewHistorial}
+          />
+        </>
       )}
 
       {isVisibleHistorial ? <HistorialHome /> : <OdersHome />}

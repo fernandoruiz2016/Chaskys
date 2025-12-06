@@ -42,10 +42,12 @@
 
 .profit-home-title {
   font-size: 24px;
+  color: #564787;
 }
 
 .profit-home-summary {
   font-size: 64px;
+  color: #564787;
 }
 
 .record-home {
@@ -57,12 +59,14 @@
 .record-summary {
   display: flex;
   justify-content: space-between;
+  color: #564787;
 }
 
 .record-view-history {
   display: flex;
   justify-content: center;
   margin-top: 13px;
+  color: #564787;
 }
 
 .order-home {
@@ -73,12 +77,15 @@
 .order-home-title {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #564787;
   font-size: 24px;
   margin-bottom: 38px;
 }
 
 .card-order {
-  background-color: #9ddfd2;
+  background-color: #564787;
   border-radius: 16px;
   padding: 7px 14px;
   margin-bottom: 15px;
@@ -90,6 +97,7 @@
   justify-content: space-between;
   font-size: 24px;
   margin-bottom: 18px;
+  color: #FFFFFF;
 }
 
 .card-order-details {
@@ -97,7 +105,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 8px;
-  color: #5B5B5B
+  color: #DBCBD8;
+}
+
+.card-order-details > :nth-child(2n) {
+  text-align: right;
 }
 
 .record-view-orders {
@@ -105,6 +117,7 @@
   justify-content: center;
   gap: 0.3em;
   margin-bottom: 10px;
+  color: #564787;
 }
 
 .header-home {
@@ -159,7 +172,75 @@
   border-radius: 20px;
 }
 
+.brief {
+  margin-top: 25px;
+  padding-top: 0 !important;
+  padding-bottom: 30px !important;
+  color: #564787;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brief-info {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  position: relative;
+}
+
+.brief-info::before,
+.brief-info::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #564787;
+  transform: translate(-50%, -50%);
+}
+
+/* Línea vertical */
+.brief-info::before {
+  width: 2px;
+  height: 100%;
+}
+
+/* Línea horizontal */
+.brief-info::after {
+  width: 100%;
+  height: 2px;
+}
+
+.brief-info-stat {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.brief-info-stat p {
+  margin: 0;
+  text-align: center;
+}
+
+.brief-subtitle {
+  font-size: 20px;
+}
+
+.brief-stat {
+  font-size: 36px;
+}
+
 @media screen and (max-width: 350px) {
+  .record-view-orders {
+  gap: 0;
+  text-align: center;
+}
+
   .header-user {
     gap: 5px;
   }
@@ -174,6 +255,9 @@
     font-size: 16px;
   }
 
+  .brief-stat {
+  font-size: 30px;
+}
 
 }
 
