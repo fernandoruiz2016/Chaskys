@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { Order } from "../home/oders/Order";
 import { Map } from "../shared/Map";
 
-mapboxgl.accessToken = "CHANGEME";
+mapboxgl.accessToken = import.meta.env.VITE_MAP_TOKEN;
 
 export const MapMonitoring = ({ id }) => {
   const [isLoagin, setIsLoagin] = useState(false);
