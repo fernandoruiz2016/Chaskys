@@ -77,6 +77,17 @@ export const MapConfirmMonitoring = ({ id }) => {
                 km={order.km}
                 date={order.date}
             />
+            
+            <div className="notes">
+                <div className="notes-subtitle">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 25.5C5.84531 25.5 4.5 24.1547 4.5 22.5V7.5C4.5 5.84531 5.84531 4.5 7.5 4.5H22.5C24.1547 4.5 25.5 5.84531 25.5 7.5V17.5078C25.5 18.3047 25.1859 19.0687 24.6234 19.6312L19.6266 24.6234C19.0641 25.1859 18.3 25.5 17.5031 25.5H7.5ZM22.7578 17.25H18.375C17.7516 17.25 17.25 17.7516 17.25 18.375V22.7578L22.7578 17.25Z" fill="#564787" />
+                    </svg>
+                    <p>Notas</p>
+                </div>
+                <p className="notes-text">{order.notes}</p>
+            </div>
+
             {order.id ? (
                 <div className="map" style={{ display: "block" }}>
                     <Map mOrigin={order.origin} mDestination={order.destination} />
