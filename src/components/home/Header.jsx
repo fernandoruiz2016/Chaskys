@@ -6,26 +6,7 @@ export const HeaderHome = ({ user, setUser }) => {
 
   const navigate = useNavigate();
 
-  const handlerRedictProfile = () => {
-    navigate("/profile")
-  }
-
   return (
-    // <section className="header-home">
-    //   <Link className="header-user" to="/profile">
-    //     <img src={user.picture} className="header-picture" alt="Foto de perfil" />
-    //     <div className='header-user-text'>
-    //       <p className='header-user-text-name'>{user.name}</p>
-    //       <p className="chasky-black-header">Chasky Black</p>
-    //     </div>
-    //   </Link>
-
-    //   <div className="header-logo">
-    //     <span className="header-logo-name color-orange">Chaskys</span>
-    //     <span className="header-logo-subname">Delivery app</span>
-    //   </div>
-    // </section>
-
     <div className="header-home">
       <Link className="header-user" to="/profile">
         <img src={user.picture} className="header-picture" alt="Foto de perfil" />
