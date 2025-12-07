@@ -18,7 +18,8 @@
                 "destination": "Calle Ricando Angulo 2222, Miraflores"
             },
             "km": 2.2,
-            "date": "06/12/2025  13:20"
+            "date": "06/12/2025  13:20",
+            "notes": "Dejar en el portón"
         },
         {
             "id": 321,
@@ -37,7 +38,8 @@
                 "destination": "Calle Jorge ochoa 222, San Isidro"
             },
             "km": 3.2,
-            "date": "06/12/2025  09:15"
+            "date": "06/12/2025  09:15",
+            "notes": "Tocar timbre del departamento 301"
         }
     ]
 }

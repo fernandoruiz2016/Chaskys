@@ -12,6 +12,7 @@ import { NewPassword } from "./pages/NewPassword"
 import { IngresarEmail } from "./pages/IngresarEmail"
 import { MonitoringOrder } from "./pages/MonitoringOrder"
 import { ConfirmOrder } from "./pages/ConfirmOrder"
+import { HistorialDetails } from "./pages/HistorialDetails"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />
+        <Route path="details/:id" element={<HistorialDetails />} />
         <Route path="profile" element={<Profile />} />
         <Route path="edit-profile" element={<EditProfile />} />
         <Route path="restore-password" element={<RestorePassword />} />
