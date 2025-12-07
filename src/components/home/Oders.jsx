@@ -9,7 +9,7 @@ export const OdersHome = () => {
       try {
         const response = await fetch("/data.json");
         if (!response.ok) {
-          alert("no se encontr el archivo");
+          alert("No se encontró el archivo");
         }
         const { data } = await response.json();
         setOrders(data);
@@ -25,7 +25,7 @@ export const OdersHome = () => {
       <div className="order-home-title">
         <span>PEDIDOS DISPONIBLES</span>
       </div>
-      {orders.map(({ id, client, amount, address, km }) => (
+      {orders.map(({ id, client, amount, address, km, date }) => (
         <Order
           key={id}
           id={id}
@@ -33,6 +33,7 @@ export const OdersHome = () => {
           amount={amount}
           address={address}
           km={km}
+          date={date}
         />
       ))}
     </section>

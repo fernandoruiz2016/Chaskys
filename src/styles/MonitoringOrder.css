@@ -15,6 +15,7 @@
 
 .btn-cancel{
     background-color: #EF929B;
+    color: #101935;
     border: none;
     padding: 11px;
     border-radius: 8px;
@@ -24,8 +25,8 @@
 }
 
 .btn-accept{
-    background-color: #5ED15E;
-    color: #fff;
+    background-color: #9AD4D6;
+    color: #101935;
     border: none;
     padding: 11px;
     border-radius: 8px;
@@ -42,4 +43,9 @@
     align-items: center;
     font-family: "Itim", cursive;
     font-size: 20px;
+}
+
+.monitoring {
+    margin-top: 25px;
+    margin-bottom: 30px;
 }

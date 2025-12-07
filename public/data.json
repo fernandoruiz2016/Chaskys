@@ -17,7 +17,9 @@
                 "origin": "Av. Arequipa 1234, Lima",
                 "destination": "Calle Los Pinos 567, Miraflores"
             },
-            "km": 5.2
+            "km": 5.2,
+            "date": "11/12/2025  10:35",
+            "notes": "Dejar en portería"
         },
         {
             "id": 2,
@@ -35,7 +37,9 @@
                 "origin": "Av. Trujillo 4321, Lima",
                 "destination": "Calle Las Flores 890, San Isidro"
             },
-            "km": 5.2
+            "km": 5.2,
+            "date": "11/12/2025  09:40",
+            "notes": "Productos frágiles"
         }
     ]
 }

@@ -22,6 +22,8 @@ export const MapMonitoring = ({ id }) => {
     origin: [-77.029842, -12.04574],
     destination: [-77.029842, -12.04574],
     km: "",
+    date: "",
+    notes: "",
   });
 
   useEffect(() => {
@@ -56,7 +58,7 @@ export const MapMonitoring = ({ id }) => {
       }
     };
     fetchData();
-  }, {});
+  }, );
 
   const navigate = useNavigate();
 
@@ -93,6 +95,7 @@ export const MapMonitoring = ({ id }) => {
         amount={order.amount}
         client={order.client}
         km={order.km}
+        date={order.date}
       />
 
       <div
@@ -118,14 +121,14 @@ export const MapMonitoring = ({ id }) => {
           style={isLoagin ? { width: "100%" } : {}}
           onClick={handlerCancel}
         >
-          Cancelar
+          CANCELAR
         </button>
         <button
           className="btn-accept"
           style={isLoagin ? { display: "none" } : {}}
           onClick={handlerAccept}
         >
-          Aceptar
+          ACEPTAR
         </button>
       </div>
     </section>
