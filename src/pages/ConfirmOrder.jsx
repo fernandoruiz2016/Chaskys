@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from "react-router-dom";
 import { HeaderHome } from '../components/home/Header'
 import { MapConfirmMonitoring } from '../components/monitoring/MapConfirm'
+import { useParams } from "react-router-dom";
+
 import '../styles/ConfirmOrder.css'
 
 export const ConfirmOrder = () => {
+    const [user, setUser] = useState(null);
 
     const [firstView, setFirstView] = useState(true)
     const [count, setCount] = useState(2)
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const countInterval = setInterval(() => {
@@ -22,10 +28,27 @@ export const ConfirmOrder = () => {
         return () => clearInterval(countInterval);
     }, [])
 
+    useEffect(() => {
+        const stored = localStorage.getItem("registeredUser");
+        if (stored) {
+            setUser(JSON.parse(stored));
+        } else {
+            navigate("/Login")
+        }
+    }, []);
+
+    useEffect(() => {
+        document.body.classList.add("background2");
+        return () => {
+            document.body.classList.remove("background2");
+        };
+    }, []);
+
+    const { id } = useParams();
 
     return (
         <>
-            <HeaderHome />
+            {user && (<HeaderHome user={user} setUser={setUser}></HeaderHome>)}
             {
                 firstView ? <div className='card confirm-order'>
                     <svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +57,7 @@ export const ConfirmOrder = () => {
 
                     <span>Pedido confirmado...!</span>
                 </div> :
-                    <MapConfirmMonitoring />
+                    <MapConfirmMonitoring id={id} ></MapConfirmMonitoring>
             }
         </>
     )

@@ -13,6 +13,7 @@ import { IngresarEmail } from "./pages/IngresarEmail"
 import { MonitoringOrder } from "./pages/MonitoringOrder"
 import { ConfirmOrder } from "./pages/ConfirmOrder"
 import { HistorialDetails } from "./pages/HistorialDetails"
+import { OrderFinished } from "./pages/OrderFinished"
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Route path="new-password" element={<NewPassword />} />
         <Route path="ingresar-email" element={<IngresarEmail />} />
         <Route path="monitoring-order/:id" element={<MonitoringOrder />} />
-        <Route path="confirm-order" element={<ConfirmOrder />} />
+        <Route path="confirm-order/:id" element={<ConfirmOrder />} />
+        <Route path="order-finished/:id" element={<OrderFinished />} />
       </Routes>
     </>
   );

@@ -44,7 +44,7 @@ export const MapMonitoring = ({ id }) => {
       try {
         const response = await fetch("/data.json");
         if (!response.ok) {
-          alert("no se encontr el archivo");
+          alert("No se encontró el archivo");
         }
         const { data } = await response.json();
         const findOrder = data.find((e) => e.id == id);
@@ -74,7 +74,7 @@ export const MapMonitoring = ({ id }) => {
         if (prevCount <= 1) {
           clearInterval(countInterval);
           setIsLoagin(false);
-          navigate("/confirm-order");
+          navigate("/confirm-order/" + id);
           return 0;
         }
         return prevCount - 1;
