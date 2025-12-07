@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export const Order = ({ id, client, amount, address, km }) => {
+export const Order = ({ id, client, amount, address, km, date }) => {
   const navigate = useNavigate();
 
   const handlerRedictMonitoring = () => {
@@ -20,7 +20,7 @@ export const Order = ({ id, client, amount, address, km }) => {
           <span>{km}km</span>
         </div>
         <span>{address.destination}</span>
-        <span></span>
+        <span>{date}</span>
       </div>
     </div>
   );

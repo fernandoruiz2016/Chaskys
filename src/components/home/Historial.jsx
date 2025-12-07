@@ -1,4 +1,4 @@
-import { Order } from "./oders/Order";
+import { OrderHistorial } from "./oders/OrderHistorial";
 import { useEffect, useState } from "react";
 
 export const HistorialHome = () => {
@@ -26,7 +26,7 @@ export const HistorialHome = () => {
         <span>HISTORIAL DE PEDIDOS</span>
       </div>
       {orders.map((order) => (
-        <Order
+        <OrderHistorial
           key={order.id}
           {...order}
         />

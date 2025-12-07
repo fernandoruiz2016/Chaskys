@@ -144,6 +144,6 @@ export const Map = ({mOrigin, mDestination}) => {
 
 
     return (
-        <div ref={mapContainer} style={{ width: "100%", height: "500px" }} />
+        <div ref={mapContainer} style={{ width: "100%", height: "500px" }} className="map"/>
     );
 };

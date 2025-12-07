@@ -17,7 +17,9 @@
                 "origin": "Av. Jose Olaya 222, Barranco",
                 "destination": "Calle Ricando Angulo 2222, Miraflores"
             },
-            "km": 2.2
+            "km": 2.2,
+            "date": "06/12/2025  13:20",
+            "notes": "Dejar en el portón"
         },
         {
             "id": 321,
@@ -35,7 +37,9 @@
                 "origin": "Av Mercedes 213, Surco",
                 "destination": "Calle Jorge ochoa 222, San Isidro"
             },
-            "km": 3.2
+            "km": 3.2,
+            "date": "06/12/2025  09:15",
+            "notes": "Tocar timbre del departamento 301"
         }
     ]
 }

@@ -1,0 +1,27 @@
+#monitoring-historial {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.notes {
+    margin-bottom: 60px;
+}
+
+.notes-subtitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    color: #564787;
+}
+
+.notes-text {
+    margin-top: -10px;
+    font-size: 20px;
+    color: #564787;
+}
+
+.map {
+    border-radius: 16px;
+}
