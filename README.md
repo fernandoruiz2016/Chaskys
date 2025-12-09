@@ -27,7 +27,7 @@ Debes tener una cuenta y token en [Mapbox](https://www.mapbox.com/) para visuali
 
 1.  **Clonar el Repositorio:**
     ```sh
-    git clone [https://github.com/fernandoruiz2016/Chaskys](https://github.com/fernandoruiz2016/Chaskys)
+    git clone https://github.com/fernandoruiz2016/Chaskys
     ```
 
 2.  **Acceder al Directorio del Proyecto:**
