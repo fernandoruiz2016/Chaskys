@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export const Order = ({ id, client, amount, address, km, date }) => {
+export const Order = ({ id, client, amount, address, km, date, canNavigate=true }) => {
   const navigate = useNavigate();
 
   const handlerRedictMonitoring = () => {
@@ -8,7 +8,7 @@ export const Order = ({ id, client, amount, address, km, date }) => {
   };
 
   return (
-    <div className="card-order" onClick={handlerRedictMonitoring}>
+    <div className="card-order" onClick={canNavigate ? handlerRedictMonitoring : undefined}>
       <div className="card-order-name-summary">
         <span>{client}</span>
         <span>S/ {amount}</span>
