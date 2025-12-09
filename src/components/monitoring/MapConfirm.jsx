@@ -76,6 +76,7 @@ export const MapConfirmMonitoring = ({ id }) => {
                 client={order.client}
                 km={order.km}
                 date={order.date}
+                canNavigate={false}
             />
             
             <div className="notes">
