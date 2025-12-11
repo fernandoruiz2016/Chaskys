@@ -1,0 +1,105 @@
+/* ════════════════════════════════════════════════
+   TARJETA PRINCIPAL
+══════════════════════════════════════════════════ */
+.finished-card {
+    margin: 110px auto 40px;
+    width: 92%;
+    max-width: 380px;
+    background: #FFFFFF;
+    padding: 32px 26px;
+    border-radius: 28px;
+    border: 2.6px solid rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.18);   /* ← blur Y=4 */
+    text-align: center;
+}
+
+/* TÍTULO */
+.finished-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #564787;
+    margin-bottom: 14px;
+}
+
+/* ICONO */
+.finished-icon svg {
+    width: 185px;
+    height: 185px;
+}
+
+/* ¡BUEN TRABAJO! */
+.finished-goodjob {
+    font-size: 26px;
+    font-weight: 700;
+    color: #564787;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+/* Descripción */
+.finished-desc {
+    font-size: 15.5px;
+    color: #6d6d6d;
+    margin-bottom: 28px;
+}
+
+/* ════════════════════════════════════════════════
+   CAJA DE INFORMACIÓN
+══════════════════════════════════════════════════ */
+.finished-info {
+    border: 2px solid #CFC2F1;
+    border-radius: 16px;
+    padding: 18px 18px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* PRIMERA LÍNEA (Total Ganado) — con divisor */
+.finished-info .row:first-child {
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+    border-bottom: 1.4px solid #CFC2F1;   /* ← línea exacta */
+}
+
+.finished-info .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5px 0;
+}
+
+.finished-info span {
+    color: #707070;
+    font-size: 14.6px;
+}
+
+.finished-info strong {
+    font-size: 15.8px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ════════════════════════════════════════════════
+   BOTÓN VOLVER AL INICIO
+══════════════════════════════════════════════════ */
+.finished-btn {
+    width: 100%;
+    background: #9AD4D6;
+    border: none;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #101935;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.15);  /* sombra Y=4 */
+}
+
+.finished-btn:hover {
+    background: #8bc9cd;
+}
+
+.finished-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
